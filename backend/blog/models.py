@@ -21,7 +21,7 @@ class Post(models.Model):
     thumbnail = models.ImageField(upload_to=user_dictionary_path, default='blog/default.jpg', blank=True, null= True)
     excerpt = models.TextField(null=True)
     content = models.TextField()
-    slug = models.SlugField(max_length=250, unique_for_data='published', null= False, unique= True)
+    slug = models.SlugField(max_length=250, unique_for_date='published', null= False, unique= True)
     published = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='post_user')
     
