@@ -19,11 +19,7 @@ const routes = [
     path: '/blog',
     name: 'blog',
     component: () => import('../views/BlogView.vue')
-<<<<<<< HEAD
   },
-=======
-  }
->>>>>>> 7134a108d00d79e9cdff2b8b397ca5054eec34eb
 ]
 
 const router = createRouter({

@@ -7,11 +7,8 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^1.1.3",
-=======
     "autoprefixer": "^10",
->>>>>>> 7134a108d00d79e9cdff2b8b397ca5054eec34eb
     "core-js": "^3.8.3",
     "postcss": "^8",
     "tailwindcss": "^3",
