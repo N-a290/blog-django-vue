@@ -1,5 +1,6 @@
 <template>
   <div>
+<<<<<<< HEAD
     <h1>BLOG</h1>
   </div>
   <div>
@@ -40,3 +41,8 @@ export default {
 }
 
 </script>
+=======
+    <h1>Here will be the blog page</h1>
+  </div>
+</template>
+>>>>>>> 7134a108d00d79e9cdff2b8b397ca5054eec34eb
