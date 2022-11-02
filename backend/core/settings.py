@@ -35,7 +35,13 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    
     # Corsheaders
+    # CorsMiddleware should be placed as high as possible, 
+    # especially before any middleware that can generate responses 
+    # such as Django's CommonMiddleware or Whitenoise's WhiteNoiseMiddleware. 
+    # If it is not before, it will not be able to add the CORS headers to 
+    # these responses
     'corsheaders.middleware.CorsMiddleware',
 
     'django.middleware.common.CommonMiddleware',
@@ -45,16 +51,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# URLs que tienen permiso para acceder a la API
 CORS_ALLOWED_ORIGINS = [
-    "https://localhost:8000",
-    "https://127.0.0.1:8000",
-
-    "https://localhost:8080",
-    "https://127.0.0.1:8080",
-
-    "https://localhost:3000",
-    "https://127.0.0.1:3000",
+    "http://localhost:8080",
+    "http://127.0.0.1:8080"
 ]
+
+# Peticiones (GET,POST,etc) que tienen permiso de acceder a la API
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    'contenttype',
+]
+
+# CORS_ALLOW_ALL_ORIGINS = False
 
 ROOT_URLCONF = 'core.urls'
 
